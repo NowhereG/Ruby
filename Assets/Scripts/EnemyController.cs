@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     private float time=0;
     private float timeChange=3.0f;
     private int direction = 1;
-    //¶¯»­×é¼þ
+    //åŠ¨ç”»ç»„ä»¶
     private Animator animator;
     private bool isBroken;
 
@@ -41,15 +41,15 @@ public class EnemyController : MonoBehaviour
             position = transform.position;
             if (isVertical)
             {
-                //´¹Ö±ÒÆ¶¯
+                //åž‚ç›´ç§»åŠ¨
                 position.y += speed * Time.deltaTime * direction;
             }
             else
             {
-                //ºáÏòÒÆ¶¯
+                //æ¨ªå‘ç§»åŠ¨
                 position.x += speed * Time.deltaTime * direction;
             }
-            //Ã¿3Ãë»»·½Ïò
+            //æ¯3ç§’æ¢æ–¹å‘
             time += Time.deltaTime;
             if (time >= timeChange)
             {
@@ -91,7 +91,7 @@ public class EnemyController : MonoBehaviour
     public void Fix()
     {
         BackGroundMusic.Instance.ChangeEnemyVolume();
-        //±»ÐÞºÃÁË
+        //è¢«ä¿®å¥½äº†
         gameObject.tag = "FixedEnemy";
         smokeEffect.Stop();
         isBroken = false;

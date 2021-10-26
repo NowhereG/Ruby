@@ -36,7 +36,7 @@ public class MusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //»ñÈ¡³¡¾°ËùÓĞµÄAudioSource×é¼ş
+        //è·å–åœºæ™¯æ‰€æœ‰çš„AudioSourceç»„ä»¶
         audioSources = GameObject.FindObjectsOfType<AudioSource>();
         foreach (AudioSource item in audioSources)
         {
@@ -46,7 +46,7 @@ public class MusicManager : MonoBehaviour
             }
         }
 
-        //if (PlayerPrefs.GetInt("MusicToggle", 1) == 1)//¿ªÆôÒôÀÖ
+        //if (PlayerPrefs.GetInt("MusicToggle", 1) == 1)//å¼€å¯éŸ³ä¹
         //{
         //    musicToggleOpenUI.isOn = true;
         //    musicSlider.gameObject.SetActive(true);
@@ -57,7 +57,7 @@ public class MusicManager : MonoBehaviour
         //        bgMusic.Play();
         //    }
         //}
-        //else//¹Ø±ÕÒôÀÖ
+        //else//å…³é—­éŸ³ä¹
         //{
         //    musicToggleCloseUI.isOn = true;
         //    musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
@@ -65,7 +65,7 @@ public class MusicManager : MonoBehaviour
         //    bgMusic.Stop();
         //}
 
-        //if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//¿ªÆôÒôĞ§
+        //if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//å¼€å¯éŸ³æ•ˆ
         //{
         //    musicEffectToggleOpenUI.isOn = true;
         //    musicEffectSlider.gameObject.SetActive(true);
@@ -85,7 +85,7 @@ public class MusicManager : MonoBehaviour
         //        //item.volume = PlayerPrefs.GetFloat("MusicEffectVolume", 1);
         //    }
         //}
-        //else//¹Ø±ÕÒôĞ§
+        //else//å…³é—­éŸ³æ•ˆ
         //{
         //    musicEffectToggleCloseUI.isOn = true;
         //    musicEffectSlider.value = PlayerPrefs.GetFloat("MusicEffectVolume", 1);
@@ -99,7 +99,7 @@ public class MusicManager : MonoBehaviour
     }
     private void Update()
     {
-        if (PlayerPrefs.GetInt("MusicToggle", 1) == 1)//¿ªÆôÒôÀÖ
+        if (PlayerPrefs.GetInt("MusicToggle", 1) == 1)//å¼€å¯éŸ³ä¹
         {
             musicToggleOpenUI.isOn = true;
             musicSlider.gameObject.SetActive(true);
@@ -110,7 +110,7 @@ public class MusicManager : MonoBehaviour
                 bgMusic.Play();
             }
         }
-        else//¹Ø±ÕÒôÀÖ
+        else//å…³é—­éŸ³ä¹
         {
             musicToggleCloseUI.isOn = true;
             musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
@@ -118,7 +118,7 @@ public class MusicManager : MonoBehaviour
             bgMusic.Pause();
         }
 
-        if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//¿ªÆôÒôĞ§
+        if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//å¼€å¯éŸ³æ•ˆ
         {
             musicEffectToggleOpenUI.isOn = true;
             musicEffectSlider.gameObject.SetActive(true);
@@ -138,7 +138,7 @@ public class MusicManager : MonoBehaviour
                 //item.volume = PlayerPrefs.GetFloat("MusicEffectVolume", 1);
             }
         }
-        else//¹Ø±ÕÒôĞ§
+        else//å…³é—­éŸ³æ•ˆ
         {
             musicEffectToggleCloseUI.isOn = true;
             musicEffectSlider.value = PlayerPrefs.GetFloat("MusicEffectVolume", 1);
@@ -150,12 +150,12 @@ public class MusicManager : MonoBehaviour
             }
         }
     }
-    //±³¾°ÒôÀÖ¿ª¹Ø
+    //èƒŒæ™¯éŸ³ä¹å¼€å…³
     public void OnMusicOpen(bool isOn)
     {
         if (isOn)
         {
-            //1´ú±í¿ª£¬0´ú±í¹Ø
+            //1ä»£è¡¨å¼€ï¼Œ0ä»£è¡¨å…³
             PlayerPrefs.SetInt("MusicToggle", 1);
             musicSlider.gameObject.SetActive(true);
             bgMusic.volume = PlayerPrefs.GetFloat("MusicVolume", 1);
@@ -169,19 +169,19 @@ public class MusicManager : MonoBehaviour
     {
         if (isOn)
         {
-            //1´ú±í¿ª£¬0´ú±í¹Ø
+            //1ä»£è¡¨å¼€ï¼Œ0ä»£è¡¨å…³
             PlayerPrefs.SetInt("MusicToggle", 0);
             //musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1);
             musicSlider.gameObject.SetActive(false);
             bgMusic.Pause();
         }
     }
-    //ÒôĞ§¿ª¹Ø
+    //éŸ³æ•ˆå¼€å…³
     public void OnMusicEffectOpen(bool isOn)
     {
         if (isOn)
         {
-            //1´ú±í¿ª£¬0´ú±í¹Ø
+            //1ä»£è¡¨å¼€ï¼Œ0ä»£è¡¨å…³
             PlayerPrefs.SetInt("MusicEffectToggle", 1);
             musicEffectSlider.gameObject.SetActive(true);
             musicEffectSlider.value = PlayerPrefs.GetFloat("MusicEffectVolume", 1);
@@ -206,7 +206,7 @@ public class MusicManager : MonoBehaviour
     {
         if (isOn)
         {
-            //1´ú±í¿ª£¬0´ú±í¹Ø
+            //1ä»£è¡¨å¼€ï¼Œ0ä»£è¡¨å…³
             PlayerPrefs.SetInt("MusicEffectToggle", 0);
             //musicEffectSlider.value = PlayerPrefs.GetFloat("MusicEffectVolume", 1);
             musicEffectSlider.gameObject.SetActive(false);
@@ -217,17 +217,17 @@ public class MusicManager : MonoBehaviour
             }
         }
     }
-    //ÒôÀÖÒôÁ¿
+    //éŸ³ä¹éŸ³é‡
     public void OnMusicVolumeChange(float value)
     {
-        //value£º0-1µÄÈ¡Öµ
+        //valueï¼š0-1çš„å–å€¼
         PlayerPrefs.SetFloat("MusicVolume", value);
         bgMusic.volume = PlayerPrefs.GetFloat("MusicVolume", 1);
     }
-    //ÒôĞ§ÒôÁ¿
+    //éŸ³æ•ˆéŸ³é‡
     public void OnMusicEffectVolumeChange(float value)
     {
-        //value£º0-1µÄÈ¡Öµ
+        //valueï¼š0-1çš„å–å€¼
         PlayerPrefs.SetFloat("MusicEffectVolume", value);
         foreach (AudioSource item in audioSourcesList)
         {
@@ -260,7 +260,7 @@ public class MusicManager : MonoBehaviour
     //        }
     //    }
     //}
-    //Ã¿ĞŞºÃÒ»¸ö»úÆ÷ÈË¾Íµ÷ÓÃÕâ¸ö·½·¨£¬ĞŞ¸Ä»úÆ÷ÈËµÄÒôÁ¿
+    //æ¯ä¿®å¥½ä¸€ä¸ªæœºå™¨äººå°±è°ƒç”¨è¿™ä¸ªæ–¹æ³•ï¼Œä¿®æ”¹æœºå™¨äººçš„éŸ³é‡
     //public void SelectEnemyCount()
     //{
     //    if (GameObject.FindGameObjectsWithTag("Enemy").Length != 0)

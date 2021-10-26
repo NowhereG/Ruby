@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// ¸ñ×ÓÀàĞÍ
+/// æ ¼å­ç±»å‹
 /// </summary>
 public enum E_Node_Type
 {
-    //¿ÉÒÔ×ßµÄ¸ñ×Ó
+    //å¯ä»¥èµ°çš„æ ¼å­
     walk,
-    //²»¿ÉÒÔ×ßµÄ¸ñ×Ó
+    //ä¸å¯ä»¥èµ°çš„æ ¼å­
     stop
 }
 public class AStarNode
 {
-    //Ñ°Â·ÏûºÄ
+    //å¯»è·¯æ¶ˆè€—
     public float f;
-    //ÀëÆğµãµÄ¾àÀë
+    //ç¦»èµ·ç‚¹çš„è·ç¦»
     public float g;
-    //ÀëÖÕµãµÄ¾àÀë
+    //ç¦»ç»ˆç‚¹çš„è·ç¦»
     public float h;
-    //¸ñ×Ó×ø±ê
+    //æ ¼å­åæ ‡
     public int _x;
     public int _y;
-    //¸ñ×ÓÀàĞÍ
+    //æ ¼å­ç±»å‹
     public E_Node_Type _type;
     public AStarNode father;
     public AStarNode(int x,int y,E_Node_Type type)

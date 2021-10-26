@@ -7,7 +7,7 @@ public class EffectManager : MonoBehaviour
     private static EffectManager _instance;
     public static EffectManager Instance { get { return _instance; } }
     private AudioSource audioSource;
-    //ÒôĞ§list 0£ºÊÕ¼¯ÒôĞ§
+    //éŸ³æ•ˆlist 0ï¼šæ”¶é›†éŸ³æ•ˆ
     public List<AudioClip> audioClips = new List<AudioClip>();
     private void Start()
     {

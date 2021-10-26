@@ -12,7 +12,7 @@ public class BackGroundMusic : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        //»ñÈ¡³¡¾°ËùÓĞµÄAudioSource×é¼ş
+        //è·å–åœºæ™¯æ‰€æœ‰çš„AudioSourceç»„ä»¶
         audioSources = GameObject.FindObjectsOfType<AudioSource>();
         foreach (AudioSource item in audioSources)
         {
@@ -30,7 +30,7 @@ public class BackGroundMusic : MonoBehaviour
         //        audioSource.Play();
         //    }
         //}
-        //if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//¿ªÆôÒôĞ§
+        //if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//å¼€å¯éŸ³æ•ˆ
         //{
         //    foreach (AudioSource item in audioSourcesList)
         //    {
@@ -44,7 +44,7 @@ public class BackGroundMusic : MonoBehaviour
         //        }
         //    }
         //}
-        //else//¹Ø±ÕÒôĞ§
+        //else//å…³é—­éŸ³æ•ˆ
         //{
         //    foreach (AudioSource item in audioSourcesList)
         //    {
@@ -61,12 +61,12 @@ public class BackGroundMusic : MonoBehaviour
                 audioSource.Play();
             }
         }
-        else//¹Ø±ÕÒôÀÖ
+        else//å…³é—­éŸ³ä¹
         {
             audioSource.Pause();
         }
 
-        if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//¿ªÆôÒôĞ§
+        if (PlayerPrefs.GetInt("MusicEffectToggle", 1) == 1)//å¼€å¯éŸ³æ•ˆ
         {
             foreach (AudioSource item in audioSourcesList)
             {
@@ -80,7 +80,7 @@ public class BackGroundMusic : MonoBehaviour
                 }
             }
         }
-        else//¹Ø±ÕÒôĞ§
+        else//å…³é—­éŸ³æ•ˆ
         {
             foreach (AudioSource item in audioSourcesList)
             {

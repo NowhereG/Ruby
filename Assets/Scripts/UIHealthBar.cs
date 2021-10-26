@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UIHealthBar : MonoBehaviour
 {
-    //ĞèÒª¸Ä±ä´óĞ¡µÄÍ¼Æ¬
+    //éœ€è¦æ”¹å˜å¤§å°çš„å›¾ç‰‡
     public Image maskImg;
-    //Ô­Ê¼Í¼Æ¬¿í¶È
+    //åŸå§‹å›¾ç‰‡å®½åº¦
     private float maskSize;
-    //µ¥ÀıÉè¼ÆÄ£Ê½
+    //å•ä¾‹è®¾è®¡æ¨¡å¼
     public static UIHealthBar instance { get; private set; }
 
     public bool hasTask;
@@ -19,16 +19,16 @@ public class UIHealthBar : MonoBehaviour
     void Awake()
     {
         instance = this;
-        //»ñÈ¡Ô­Ê¼¿í¶È
+        //è·å–åŸå§‹å®½åº¦
         maskSize = maskImg.rectTransform.rect.width;
     }
     /// <summary>
-    /// ¸Ä±äHealthBarµÄ¿í¶È
+    /// æ”¹å˜HealthBarçš„å®½åº¦
     /// </summary>
-    /// <param name="fillPercent">µ±Ç°ÉúÃüÖµÕ¼×ÜÉúÃüµÄ°Ù·Ö±È</param>
+    /// <param name="fillPercent">å½“å‰ç”Ÿå‘½å€¼å æ€»ç”Ÿå‘½çš„ç™¾åˆ†æ¯”</param>
     public void ChangeHealthBar(float fillPercent)
     {
-        //°´ÕÕ°Ù·Ö±È¸Ä±äÍ¼Æ¬¿í¶È
+        //æŒ‰ç…§ç™¾åˆ†æ¯”æ”¹å˜å›¾ç‰‡å®½åº¦
         maskImg.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, maskSize * fillPercent);
     }
 

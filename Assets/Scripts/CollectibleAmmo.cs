@@ -10,7 +10,7 @@ public class CollectibleAmmo : MonoBehaviour
         RubyController ruby = collision.GetComponent<RubyController>();
         if (ruby != null)
         {
-            //×Óµ¯ÊıÁ¿+5
+            //å­å¼¹æ•°é‡+5
             UIButtetCount.Instance.ChangeBulletCount(5);
             GameObject.Instantiate(partical, transform.position, Quaternion.identity);
             EffectManager.Instance.PlayEffect(0);
